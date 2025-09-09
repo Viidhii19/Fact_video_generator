@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AI Fact Video Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script><!--to  style the page without wrtiting custom CCS-->
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen"><!--flexbox -center the items vertically and horizantaly-->
+    <div class="w-full max-w-md bg-gray-800 p-6 rounded shadow-md"><!--A container box with padding, rounded corners, and a slight shadow effect.-->
+        <h1 class="text-2xl font-bold mb-4 text-center">Fact Video Generator</h1>
+        <form id="factForm" class="space-y-4"><!--vertical spacing between fields.-->
+            <div>
+                <label for="topic" class="block mb-1">Topic</label>
+                <input type="text" id="topic" class="w-full p-2 rounded bg-gray-700" placeholder="Enter topic" required>
+            </div>
+            <div>
+                <label for="clips" class="block mb-1">Number of Clips</label>
+                <input type="number" id="clips" min="1" max="10" value="3" class="w-full p-2 rounded bg-gray-700">
+            </div>
+            <div>
+                <label for="output" class="block mb-1">Output File Name</label>
+                <input type="text" id="output" value="output.mp4" class="w-full p-2 rounded bg-gray-700">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 p-2 rounded">Generate Video</button>
+        </form>
+        <div id="result" class="mt-4 text-center"></div>
+    </div>
+
+    <!--References the form and the result display area.-->
+    <script>
+        
+        const form = document.getElementById('factForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const topic = document.getElementById('topic').value;
+            const clips = document.getElementById('clips').value;
+            const output = document.getElementById('output').value;
+
+            resultDiv.textContent = "Generating video... please wait.";
+
+            try {
+                const response = await fetch('http://localhost:5000/api/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ topic, clips, output })
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    resultDiv.innerHTML = `✅ Video created! <a href="${data.fileUrl}" class="text-blue-400 underline">Download here</a>`;
+                } else {
+                    resultDiv.textContent = "❌ Failed to generate video.";
+                }
+            } catch (error) {
+                resultDiv.textContent = "❌ Error contacting server.";
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>

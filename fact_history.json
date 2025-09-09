@@ -1,0 +1,42 @@
+{
+    "Whatsapp": [
+        "WhatsApp's original name was WhatsApp Inc.  WhatsApp co-founder Jan Koum once worked as a security guard at a supermarket.  WhatsApp uses end-to-end encryption by default, meaning even WhatsApp itself cannot read your messages.",
+        "WhatsApp's status updates were initially only available for 24 hours before disappearing.",
+        "The app's iconic green color was chosen to represent growth and freshness.",
+        "WhatsApp briefly allowed users to send messages to themselves."
+    ],
+    "earth": [
+        "Earth's rotation is gradually slowing down.",
+        "There are more trees on Earth than stars in the Milky Way galaxy.",
+        "A single day on Earth is slowly getting longer.",
+        "The Earth's core is as hot as the surface of the sun.",
+        "Earth is the only planet known to support life.",
+        "Around 70% of the Earth's surface is covered by water.",
+        "Earth's magnetic field flips polarity irregularly, with the north and south magnetic poles switching places.",
+        "The deepest point on Earth, the Challenger Deep in the Mariana Trench, is so deep that if Mount Everest were placed there, its peak would still be over a mile underwater.",
+        "Earth's atmosphere is constantly losing hydrogen atoms to space."
+    ],
+    "The Sun": [
+        "The Sun rotates faster at its equator than at its poles.",
+        "The Sun's surface temperature is around 5,500 degrees Celsius, but its core reaches a scorching 15 million degrees Celsius.",
+        "The Sun loses about a billion kilograms of mass every second through solar wind.",
+        "Sunspots, appearing darker, are actually cooler regions on the Sun's surface due to intense magnetic activity.",
+        "Helium was first discovered in the Sun's spectrum before it was found on Earth.",
+        "The Sun's magnetic field reverses polarity approximately every 11 years, marking the peak of the solar cycle.",
+        "The Sun makes up about 99.86% of the total mass of the entire Solar System.",
+        "Sound waves travel through the Sun at speeds exceeding 350 kilometers per second.",
+        "The Sun's energy is produced through nuclear fusion, converting hydrogen into helium and releasing vast amounts of energy.",
+        "The Sun's magnetic field lines can sometimes reconnect explosively, releasing energy in the form of solar flares.",
+        "Tiny particles called neutrinos, created in the Sun's core, constantly pass through the Earth."
+    ],
+    "Github": [
+        "GitHub's logo is a stylized version of a giant panda, a nod to the Git version control system's mascot.",
+        "GitHub uses a custom-built, highly optimized database system for its massive code repository, not a standard relational database like MySQL or PostgreSQL.",
+        "GitHub's Copilot, an AI-powered code completion tool, was initially trained on a massive dataset of public GitHub repositories."
+    ],
+    "GitHub": [
+        "GitHub's logo, the Octocat, has been redesigned multiple times, reflecting the platform's evolution.",
+        "GitHub Pages allows users to host static websites directly from their repositories for free.",
+        "GitHub Copilot, an AI pair programmer, can suggest code completions and entire functions in real-time."
+    ]
+}
